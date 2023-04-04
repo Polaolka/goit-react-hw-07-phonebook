@@ -2,7 +2,7 @@ import React from 'react';
 import css from '../ContactsList/ContactsList.module.css';
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
-import { deleteContact } from '../../redux/contactsSlice';
+import { deleteContact } from 'redux/operations';
 import { toast } from 'react-toastify';
 import { selecVisibleContacts } from '../../redux/selectors';
 

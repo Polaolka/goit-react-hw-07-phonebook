@@ -8,15 +8,15 @@ import { setContactFilter } from "../../redux/filterSlice";
 import { selectContacts } from "../../redux/selectors";
 
 export const Filter = () => {
-  
-  const filter = useSelector(selectContactFilter);
- 
   const contacts = useSelector(selectContacts);
+  const filter = useSelector(selectContactFilter);
+
   const dispatch = useDispatch();
   const total = contacts.length;
 
   const changeFilter = e => {
     dispatch(setContactFilter(e.currentTarget.value.toLowerCase()));
+    console.log(filter);
   };
 
   
