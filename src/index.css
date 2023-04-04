@@ -13,3 +13,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+p {
+  margin: 0;
+}
+body {
+  background-image: url('./Img/paper-texture.jpg');
+}
