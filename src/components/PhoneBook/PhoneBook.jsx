@@ -13,13 +13,14 @@ export const PhoneBook = () => {
   const [number, setNumber] = useState('');
 
   const onInputContact = event => {
-    // const form = event.target;
     switch (event.target.name) {
       case 'name':
         setName(s => (s = event.target.value));
+        console.log(name);
         break;
       case 'number':
         setNumber(s => (s = event.target.value));
+
         break;
       default:
         return;
@@ -29,7 +30,7 @@ export const PhoneBook = () => {
   const contacts = useSelector(selectContacts);
   const handleSubmit = e => {
     e.preventDefault();
-    const checkName = contacts.find(contact => contact.name === name);
+    const checkName = contacts.find(contact => contact.name.toLowerCase() === name.toLowerCase());
     if (checkName) {
       toast(`${name} is already in contacts`);
       return;
