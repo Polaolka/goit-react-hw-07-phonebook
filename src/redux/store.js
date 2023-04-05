@@ -7,10 +7,10 @@ export const store = configureStore({
     contacts: contactsReducer,
     filter: filterReducer,
   },
-  // middleware: getDefaultMiddleware =>
-  // getDefaultMiddleware({
-  //   serializableCheck: {
-  //     ignoredActions: ['contacts/fetchContacts/fulfilled'],
-  //   },
-  // }),
+  middleware: getDefaultMiddleware =>
+  getDefaultMiddleware({
+    serializableCheck: {
+      ignoredActions: ['contacts/fetchContacts/fulfilled'],
+    },
+  }),
 });

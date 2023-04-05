@@ -16,7 +16,6 @@ export const Filter = () => {
 
   const changeFilter = e => {
     dispatch(setContactFilter(e.currentTarget.value.toLowerCase()));
-    console.log(filter);
   };
 
   

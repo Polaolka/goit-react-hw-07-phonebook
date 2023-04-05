@@ -16,7 +16,6 @@ export const PhoneBook = () => {
     switch (event.target.name) {
       case 'name':
         setName(s => (s = event.target.value));
-        console.log(name);
         break;
       case 'phone':
         setPhone(s => (s = event.target.value));

@@ -17,7 +17,6 @@ export const ContactsList = () => {
   }, [dispatch]);
 
   const visibleContacts = useSelector(selecVisibleContacts);
-  console.log(visibleContacts);
 
   const handleDelete = contactId => {
     dispatch(deleteContact(contactId));
