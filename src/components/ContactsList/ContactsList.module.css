@@ -10,14 +10,14 @@
     display: flex;
     gap: 10px;
     align-items: center;
-
+    justify-content:flex-end;
 }
 .name {
 
 }
 
 .button {
-    margin-left: auto;
+    margin-left: 10px;
     display: inline-block;
     background-color:cornflowerblue;;
     color: white;
@@ -43,4 +43,6 @@
 .number {
     font-weight: bold;
     color: rgb(55, 60, 70);
+    display: block;
+    margin-left: auto;
 }

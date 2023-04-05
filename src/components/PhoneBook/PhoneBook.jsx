@@ -10,7 +10,7 @@ import 'react-toastify/dist/ReactToastify.css';
 export const PhoneBook = () => {
   const dispatch = useDispatch();
   const [name, setName] = useState('');
-  const [number, setNumber] = useState('');
+  const [phone, setPhone] = useState('');
 
   const onInputContact = event => {
     switch (event.target.name) {
@@ -18,8 +18,8 @@ export const PhoneBook = () => {
         setName(s => (s = event.target.value));
         console.log(name);
         break;
-      case 'number':
-        setNumber(s => (s = event.target.value));
+      case 'phone':
+        setPhone(s => (s = event.target.value));
 
         break;
       default:
@@ -35,12 +35,12 @@ export const PhoneBook = () => {
       toast(`${name} is already in contacts`);
       return;
     }
-    const data = { name, number };
+    const data = { name, phone };
 
     dispatch(addContact(data));
     toast(`Contact ${name} added successfully`);
     setName('');
-    setNumber('');
+    setPhone('');
   };
 
   return (
@@ -60,12 +60,12 @@ export const PhoneBook = () => {
           />
         </label>
         <label className={css.label}>
-          Number
+        Phone
           <input
             className={css.input}
             type="tel"
-            name="number"
-            value={number}
+            name="phone"
+            value={phone}
             onChange={onInputContact}
             pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
             title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
